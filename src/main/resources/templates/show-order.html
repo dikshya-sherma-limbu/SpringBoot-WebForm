@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Show Order</title>
+<link rel="stylesheet" th:href="@{/css/show-order.css}" />
+</head>
+<body>
+    <div class="show-order">
+    <h3 > Your Order details are as follows: </h3>
+     <h4>Welcome <span th:text="${order.firstName}"></span></h4> 
+    <div class="info-details">
+    <ul class="info-details">
+    <li><strong>Email Address:</strong><span th:text="${order.email}"></span></li>
+    <li><strong>Phone Number:</strong><span th:text="${order.phoneNumber}"></span></li>
+    <li><strong>Address:</strong><span th:text="${order.streetAddress + order.city + order.state}"></span></li>
+    </ul>
+    </div>
+    <div class="phone-details">
+    <ul class="phone-details" >
+    <li><strong>Phone Brand: </strong><span th:text="${order.productBrand} "></span></li>
+    <li><strong>Phone Model: </strong><span th:text="${order.productModel} "></span></li>
+     <li><strong>Quantity: </strong><span th:text="${order.quantity}"></span></li>
+    <li><strong>Phone Price: </strong><span th:text="${order.phonePrice} "></span></li>
+   
+    <li><strong>Total: </strong><span th:text="${order.phonePrice * order.quantity}"></span></li>
+    </ul>
+    </div>
+    <button class="clickMe-btn" onclick="window.location.href='/index'">Back</button>
+    </div>     
+</body>
+</html>

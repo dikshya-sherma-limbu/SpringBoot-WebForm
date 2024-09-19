@@ -1,0 +1,73 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-me {
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+li::before {
+    content: "•";
+    color: #666;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.image {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.clickMe-btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clickMe-btn:hover {
+    background-color: #333;
+}

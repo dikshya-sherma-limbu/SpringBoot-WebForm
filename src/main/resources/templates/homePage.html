@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+<link rel="stylesheet" th:href="@{/css/homePage.css}" />
+	<title>Introduction About Me</title>
+</head>
+
+<body>
+	<div class="intro">
+
+		<section class="about-me">
+			Hey everyone, I am Dikshya Sherma Limbu. I am 21 years old.
+			I came to Canada when I was 19 years old.
+			I am doing Advanced Diploma in Software Engineering Technology in Centennial College.
+			I am looking for a internships.
+			Here are the list of some thing that i like:
+			<ul>
+				<li>Traveling</li>
+				<li>Cooking</li>
+				<li>Reading</li>
+				<li>Walking</li>
+			</ul>
+		</section>
+		<aside class="image">
+		<img th:src="@{/images/iam.jpg}" alt="image-error"/>
+		</aside>
+		<button class="clickMe-btn" onclick="window.location.href='/index'">Click Here !</button>
+
+	</div>
+</body>
+
+</html>
