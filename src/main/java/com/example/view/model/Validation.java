@@ -51,13 +51,13 @@ public class Validation {
         String phoneModel = order.getProductModel();
 
         switch (phoneModel) {
-            case "iPhone 16":
+            case "iphone 16":
                 order.setPhonePrice(1450.00);
                 break;
-            case "iPhone 15":
+            case "iphone 15":
                 order.setPhonePrice(1200.00);
                 break;
-            case "iPhone 15 Pro Max":
+            case "iphone 15 Pro Max":
                 order.setPhonePrice(1400.00);
                 break;
             case "Samsung S21":
@@ -68,6 +68,7 @@ public class Validation {
                 break;
             case "Samsung Galaxy A 71":
             	 order.setPhonePrice(900.00);
+            	 break;
             case "Pixel 8a":
                 order.setPhonePrice(700.00);
                 break;
@@ -75,7 +76,7 @@ public class Validation {
                 order.setPhonePrice(500.00);
                 break;
             default:
-                order.setPhonePrice(0.00); // Default price if no model is matched
+                order.setPhonePrice(0.00); // Default price
                 break;
         }
     }

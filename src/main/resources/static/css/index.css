@@ -4,15 +4,16 @@ body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	margin: 0;
-	padding: 20px;
+	padding: 1.25rem;
 }
 
 form {
-	max-width: 12em;
+	width: 50em;
 	margin: 0 auto;
 	background-color:#CECECE;
 	box-sizing:border-box;
-	border-radius:10px;
+	border-radius:0.625rem;
+
 	
 }
 
@@ -22,31 +23,32 @@ form {
 }
 
 .form_details {
-	margin: 10px 30px ;
+	margin: 0.625rem 1.875rem ;
 }
 
 .input-values {
 	display: flex;
-	gap: 25px;
+	gap: 2em;
 	margin:3px 10px 2px;
 	
 }
 
 .input-values input,
 .input-values select{
-	flex: 1;
-	padding: 8px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	/*margin:3px;*/
+	
+
+	padding: 8px; 
+	border: 1px solid #ddd; 
+	border-radius: 4px; 
+	margin:3px;
 }
 
 label {
-	display: inline-block;
+	display:inline;
 	font-size: 0.9em;
 	color: #666;
-	flex: 1;
-	text-align: center;
+	
+	margin-top: 10px;
 }
 
 .submit-btn {
@@ -71,9 +73,10 @@ label {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	margin-bottom:1.25em;
 }
 
 .input-label-pair label {
 	text-align: left;
-	margin-top:2px;
+
 }
