@@ -3,7 +3,8 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	 <link rel="stylesheet" th:href="@{/css/index.css}" /> 	
+	<link rel="stylesheet" th:href="@{/css/index.css}" />
+
 	<title>Smart Phones Order Form</title>
 </head>
 
@@ -14,15 +15,19 @@
 			<h4>Full name</h4>
 			<div class="input-values">
 				<div class="input-label-pair">
-					<input type="text" id="firstName" placeholder="Enter Firstname" name="firstName"  required />
+				
+					<input type="text" id="firstName" placeholder="Enter Firstname" name="firstName"
+						pattern="[A-Za-z ]+" required />
 					<label for="firstName">First Name</label>
 				</div>
 				<div class="input-label-pair">
-					<input type="text" id="middleName" placeholder="Enter Middle Name" name="middleName"  pattern="[A-Za-z ]+" required />
+					<input type="text" id="middleName" placeholder="Enter Middle Name" name="middleName"
+						pattern="[A-Za-z ]+" required />
 					<label for="middleName">Middle Name</label>
 				</div>
 				<div class="input-label-pair">
-					<input type="text" id="lastName" placeholder="Enter Last Name" name="lastName"  pattern="[A-Za-z ]+" required />
+					<input type="text" id="lastName" placeholder="Enter Last Name" name="lastName" pattern="[A-Za-z ]+"
+						required />
 					<label for="lastName">Last Name</label>
 				</div>
 			</div>
@@ -32,7 +37,8 @@
 			<h4>Email</h4>
 			<div class="input-values">
 				<div class="input-label-pair">
-					<input type="email" id="email" placeholder="ex:abc@gmail.com" name="email"  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
+					<input type="email" id="email" placeholder="ex:abc@gmail.com" name="email"
+						pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
 					<label for="email">abc@gmail.com</label>
 				</div>
 			</div>
@@ -55,37 +61,39 @@
 		<div class="form_details">
 			<h4>Billing Address</h4>
 			<div class="input-label-pair input-values">
-				<input type="text" id="streetAddress" placeholder="Ex: 123 Donlands Ave" name="streetAddress" pattern="\d+\s+[A-Za-z0-9\s.,'-]+" required />
+				<input type="text" id="streetAddress" placeholder="Ex: 123 Donlands Ave" name="streetAddress"
+					pattern="\d+\s+[A-Za-z0-9\s.,'-]+" required />
 				<label for="streetAddress">Street Address</label>
 			</div>
 			<div class="input-label-pair input-values">
-				<input type="text" id="streetAddressTwo" placeholder="Street Address Line 2" name="streetAddressTwo"
-					 />
+				<input type="text" id="streetAddressTwo" placeholder="Street Address Line 2" name="streetAddressTwo" />
 				<label for="streetAddressTwo">Street Address Line 2</label>
 			</div>
 			<div class="input-label-pair input-values">
-				<input type="text" id="city" placeholder="City" name="city"  pattern="[A-Za-z ]+" required />
+				<input type="text" id="city" placeholder="City" name="city" pattern="[A-Za-z ]+" required />
 				<label for="city">City</label>
 			</div>
 			<div class="input-label-pair input-values">
-				<input type="text" id="state" placeholder="State/Province" name="state"  pattern="[A-Za-z ]+" required />
+				<input type="text" id="state" placeholder="State/Province" name="state" pattern="[A-Za-z ]+" required />
 				<label for="state">State/Province</label>
 			</div>
-		</div>
-		<div class="input-values">
-			<div class="input-label-pair">
-				<input type="text" id="postalCode" placeholder="M1K 4J3" name="postalCode" pattern="[A-Z]\d[A-Z] \d[A-Z]\d" required />
-				<label for="postalCode">Postal / Zip Code</label>
-			</div>
-			<div class="input-label-pair">
-				<select name="country" id="country" required>
-					<option value="" selected>Select Country</option>
-					<option value="nepal">Nepal</option>
-					<option value="canada">Canada</option>
-					<option value="usa">USA</option>
-					<option value="southKorea">South Korea</option>
-				</select>
-				<label for="country">Country</label>
+
+			<div class="input-values">
+				<div class="input-label-pair">
+					<input type="text" id="postalCode" placeholder="M1K 4J3" name="postalCode"
+						pattern="[A-Z]\d[A-Z] \d[A-Z]\d" required />
+					<label for="postalCode">Postal / Zip Code</label>
+				</div>
+				<div class="input-label-pair">
+					<select name="country" id="country" required>
+						<option value="" selected>Select Country</option>
+						<option value="nepal">Nepal</option>
+						<option value="canada">Canada</option>
+						<option value="usa">USA</option>
+						<option value="southKorea">South Korea</option>
+					</select>
+					<label for="country">Country</label>
+				</div>
 			</div>
 		</div>
 
@@ -95,43 +103,44 @@
 				<label for="product"><strong>Product#</strong></label>
 				<input type="text" id="product" name="product" required />
 			</div>
-		</div>
-		<div class="input-label-pair input-values">
-			<label for="productBrand"><strong>Phone Brand</strong></label>
-			<select name="productBrand" id="productBrand" required>
-			<option value="" selected>Select Brand</option>
-				<option value="samsung">Samsung</option>
-				<option value="iphone" >IPhone</option>
-				<option value="google">Google</option>
-			</select>
-		</div>
-		<div class="input-label-pair input-values">
-			<label for="productModel"><strong>Phone Model</strong></label>
-			<select name="productModel" id="productModel"  required>
-						<option value="" selected>Select Model</option>
-					<optgroup label="Iphone" >
-						<option value="Iphone 16">Iphone 16</option>
-						<option value="Iphone 15">Iphone 15</option>
-						<option value="Iphone 15 pro max">Iphone 15 pro max</option>
-						
+
+			<div class="input-label-pair input-values">
+				<label for="productBrand"><strong>Phone Brand</strong></label>
+				<select name="productBrand" id="productBrand" required>
+					<option value="" selected>Select Brand</option>
+					<option value="samsung">Samsung</option>
+					<option value="iphone">IPhone</option>
+					<option value="google">Google</option>
+				</select>
+			</div>
+			<div class="input-label-pair input-values">
+				<label for="productModel"><strong>Phone Model</strong></label>
+				<select name="productModel" id="productModel" required>
+					<option value="" selected>Select Model</option>
+					<optgroup label="Iphone">
+						<option value="iphone 16">Iphone 16</option>
+						<option value="iphone 15">Iphone 15</option>
+						<option value="iphone 15 Pro Max">Iphone 15 pro max</option>
+
 					</optgroup>
 					<optgroup label="Samsung">
 						<option value="Samsung S 21">Samsung S 21</option>
-						<option value="Samsung S 21 Ultra">Samsung  S 21 Ultra</option>
-						<option value="Samsung Galaxy A 71">Samsung  Galaxy A 71</option>
-						
+						<option value="Samsung S 21 Ultra">Samsung S 21 Ultra</option>
+						<option value="Samsung Galaxy A 71">Samsung Galaxy A 71</option>
+
 					</optgroup>
 					<optgroup label="Google">
-					<option value="Pixel 8a">Pixel 8a</option>
-					<option value="Pixel 6a">Pixel 6a</option>
+						<option value="Pixel 8a">Pixel 8a</option>
+						<option value="Pixel 6a">Pixel 6a</option>
 					</optgroup>
-					<!-- Add phone models here -->
+
 				</select>
-		</div>
-		<div class="input-values">
-			<div class="input-label-pair">
-				<label for="quantity"><strong>Quantity</strong></label>
-				<input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required />
+			</div>
+			<div class="input-values">
+				<div class="input-label-pair">
+					<label for="quantity"><strong>Quantity</strong></label>
+					<input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required />
+				</div>
 			</div>
 		</div>
 		<button class="submit-btn" id="submit-btn" name="action" value="submit">Submit</button>

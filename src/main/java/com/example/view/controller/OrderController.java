@@ -13,17 +13,17 @@ import com.example.view.model.Validation;
 public class OrderController {
 
 	@PostMapping("/phoneWebForm")
-	public String phone(@ModelAttribute("phoneWebForm") Order order, @RequestParam("action") String action, Model model) {
+	public String phone(@ModelAttribute("phoneWebForm") Order order,  Model model) {
 		Validation validation = new Validation();
 		boolean checkValidation = validation.checkValidation(order);
 		
 		try {
 
-			if ("submit".equals(action)) {
 				if(checkValidation==true) {
 					model.addAttribute("order", order);
 					System.out.print(checkValidation);
 					System.out.print(order.getStreetAddress());
+					System.out.print("priuce: " +order.getPhonePrice());
 					System.out.print("submitted");
 					return "show-order";	
 				}else{
@@ -32,15 +32,10 @@ public class OrderController {
 					System.out.println("Error occurred else block ");
 					return "error-page";
 				}				
-			}
 		}catch(Exception e) {
 			   System.out.println("Error occurred: " + e.getMessage());
 			return "error-page";
 		}
-		
-		System.out.print(" outside rejected");
-		// Default case
-		return "index";
 	}
 
 }
